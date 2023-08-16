@@ -1,0 +1,50 @@
+/* Loadingcard-Dark.css */
+.card- {
+  border: 1px solid #333;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #222;
+  max-width: 300px;
+}
+
+.card--body {
+  padding: 1.25rem;
+}
+.card--title,
+.card--text {
+  width: 100%;
+  height: 1rem;
+  background-color: #555;
+  margin-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card--title {
+  width: 60%;
+}
+
+.card--title::before,
+.card--text::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: wave-animation 1.5s infinite;
+  transform: translateX(-100%);
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
